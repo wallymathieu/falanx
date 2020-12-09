@@ -10,10 +10,10 @@ jobs:
 
   build-windows:
     runs-on: windows-latest
-
+    env:
+      SBT_HOME: '' # disable scala tests
     steps:
     - uses: actions/checkout@v2
-    - uses: olafurpg/setup-scala@v10
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
