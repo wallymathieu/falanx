@@ -10,7 +10,8 @@ jobs:
 
   build-windows:
     runs-on: windows-latest
-
+    env:
+      SBT_HOME: '' # disable scala tests
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
